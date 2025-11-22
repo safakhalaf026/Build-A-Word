@@ -1,0 +1,71 @@
+
+/* --------------------------------------- Constants ---------------------------------------*/
+const wordsArray = [
+  "abets", "baste", "betas", "beast", "beats",
+  "acres", "cares", "races", "scare",
+  "alert", "alter", "later",
+  "angel", "angle", "glean",
+  "ascot", "coats", "coast", "tacos",
+  "aster", "rates", "stare", "taser", "tears",
+  "baker", "brake", "break",
+  "bared", "beard", "bread", "debar",
+  "begin", "being", "binge",
+  "below", "bowel", "elbow",
+  "bores", "robes", "sober",
+  "capes", "paces", "space",
+  "caret", "cater", "crate", "trace",
+  "cider", "cried", "dicer",
+  "claps", "clasp", "scalp",
+  "cruel", "lucre", "ulcer",
+  "dater", "rated", "trade", "tread",
+  "dates", "sated", "stead",
+  "deist", "diets", "edits", "sited", "tides",
+  "dowry", "rowdy", "wordy",
+  "earns", "nears", "saner", "snare",
+  "earth", "hater", "heart",
+  "emits", "items", "mites", "smite", "times",
+  "ester", "reset", "steer", "terse", "trees",
+  "ether", "there", "three",
+  "hares", "hears", "rheas", "share", "shear",
+  "heaps", "phase", "shape",
+  "heros", "hoers", "horse", "shore",
+  "lapse", "leaps", "pales", "peals", "pleas", "sepal",
+  "leapt", "petal", "plate", "pleat",
+  "least", "slate", "stale", "steal", "tales", "teals",
+  "limes", "miles", "slime", "smile",
+  "liter", "litre", "relit", "tiler",
+  "loops", "polos", "pools", "sloop", "spool",
+  "lopes", "poles", "slope",
+  "manes", "manse", "means", "names",
+  "mates", "meats", "steam", "tames", "teams",
+  "merit", "mitre", "remit", "timer",
+  "nails", "slain", "snail",
+  "noter", "toner", "tenor", "notes", "onset", "stone", "tones",
+  "paled", "pedal", "plead", "panel", "penal", "plane",
+  "pares", "parse", "pears", "reaps", "spare", "spear", "parts", "strap", "traps",
+  "paste", "tapes", "peats", "septa", "spate",
+  "pelts", "slept", "spelt",
+  "piers", "pries", "spire",
+  "pines", "snipe", "spine",
+  "pinto", "piton", "point",
+  "pores", "poser", "prose", "ropes", "spore",
+  "reins", "resin", "rinse", "risen", "siren",
+  "rites", "tiers", "tires", "tries",
+  "saint", "satin", "stain",
+  "salve", "slave", "vales", "veals",
+  "serve", "sever", "veers", "verse",
+  "sinew", "swine", "wines",
+  "skate", "stake", "steak", "takes", "teaks",
+  "state", "taste", "teats"]
+
+/* --------------------------------------- Variables ---------------------------------------*/
+
+
+/* ------------------------------- Cached Element References -------------------------------*/
+
+
+/* --------------------------------------- Functions ---------------------------------------*/
+
+
+/* ------------------------------------ Event Listeners ------------------------------------*/
+
