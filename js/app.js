@@ -59,13 +59,66 @@ const wordsArray = [
   "state", "taste", "teats"]
 
 /* --------------------------------------- Variables ---------------------------------------*/
-
+let letterSet = []
+let currentPlayerChoice = []
+let previousPlayerChoice= []
 
 /* ------------------------------- Cached Element References -------------------------------*/
-
+const letterBtnELs = document.querySelectorAll('.letters') 
+const clearBtnEl = document.querySelector('#clearBtn')
+const enterBtnEls = document.querySelector('#enterBtn')
+const instructionsBtnEl = document.querySelector('#instructionsBtn')
+const resetBtnEl = document.querySelector('#resetBtn')
+const letterSetDisplayEl = document.querySelector('#letterSetDisplay')
+const userChoiceDisplayEl = document.querySelector('#userChoiceDisplay')
 
 /* --------------------------------------- Functions ---------------------------------------*/
+// randomizes word from the wordsArray and splits string into an array of chars
+const randomizeWordSelection = () =>{
+  const randomWord = wordsArray[Math.floor(Math.random() * wordsArray.length)]
+  const splitWord = randomWord.split('')
+  return splitWord
+}
 
+// shuffles the index order of the split array (Fisher Yates Method) 
+const shuffleSplitWord = () =>{
+  letterSet = randomizeWordSelection()
+  for (let i = letterSet.length -1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i+1));
+    let k = letterSet[i];
+    letterSet[i] = letterSet[j];
+    letterSet[j] = k;
+  }
+}
+
+// format and display letterSet array 
+const displayLetterSet = () => {
+  const letterSetString = letterSet.join(' ').toUpperCase()
+  letterSetDisplayEl.textContent = letterSetString
+}
+
+
+shuffleSplitWord()
+displayLetterSet() 
+
+// const handleLetterClick = () => {
+//   userChoiceDisplayEl.textContent = event.target.innerText
+// }
+
+const init = () => {
+  currentPlayerChoice = []
+  previousPlayerChoice= []
+}
+
+const show = () => {
+    const tryTHis = event.target.innerText
+    console.log(tryTHis)
+}
 
 /* ------------------------------------ Event Listeners ------------------------------------*/
-
+for (eachLetter of letterBtnELs) {eachLetter.addEventListener('click', show)}
+clearBtnEl.addEventListener('click', show)
+enterBtnEls.addEventListener('click', show)
+instructionsBtnEl.addEventListener('click', show)
+resetBtnEl.addEventListener('click', show)
+init()
