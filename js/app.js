@@ -69,7 +69,7 @@ let sec = 59
 /* ------------------------------- Cached Element References -------------------------------*/
 const letterBtnELs = document.querySelectorAll('.letters') 
 const clearBtnEl = document.querySelector('#clearBtn')
-const enterBtnEls = document.querySelector('#enterBtn')
+const enterBtnEl = document.querySelector('#enterBtn')
 const resetBtnEl = document.querySelector('#resetBtn')
 const letterSetDisplayEl = document.querySelector('#displayLetterSet')
 const userChoiceDisplayEl = document.querySelector('#displayUserChoice')
@@ -80,6 +80,8 @@ const myPopUpEl = document.querySelector('#myPopUp')
 const myPopUpTitleEl = document.querySelector('#myPopUpTitle')
 const myPopUpTextEl = document.querySelector('#myPopUpText')
 const closePopUpEl = document.querySelector('#closePopUp')
+const displayUserChoiceContainerEl = document.querySelector('#displayUserChoiceContainer')
+const displayWordListContainerEL = document.querySelector('#displayWordListContainer')
 
 /* --------------------------------------- Functions ---------------------------------------*/
 // randomizes word from the wordsArray and splits string into an array of chars
@@ -145,6 +147,7 @@ const handleLetterClick = (event) => {
     currentPlayerChoice.push(event.target.innerText)
     currentPlayerChoiceString = currentPlayerChoice.join(' ').toUpperCase()
     userChoiceDisplayEl.textContent = currentPlayerChoiceString
+    displayUserChoiceContainerEl.classList.remove('hiddenContainer')
   }
 }
 
@@ -169,7 +172,10 @@ const checkIfEntered = () => {
   const allWords = allPossibleWords()
   if (previousPlayerChoice.length === allWords.length){
     showPopUp('You won!!', 'All words have been found and you won', 'play again?')
-    init()
+    closePopUpEl.onclick = () => {
+        closePopUp()
+        init()
+      }
   }
 }
 
@@ -178,6 +184,9 @@ const handleClearClick = (event) => {
   currentPlayerChoice.pop()
   currentPlayerChoiceString = currentPlayerChoice.join(' ').toUpperCase()
   userChoiceDisplayEl.textContent = currentPlayerChoiceString
+    if (currentPlayerChoice.length === 0) {
+      displayUserChoiceContainerEl.classList.add('hiddenContainer')
+  }
 }
 
 // validates entered word based on conditions before appending to viewport
@@ -195,6 +204,7 @@ const appendToList = (addedWord) => {
   const newItem = document.createElement('li')
   newItem.textContent = addedWord.toUpperCase()
   displayWordListEl.appendChild(newItem)
+  displayWordListContainerEL.classList.remove('hiddenContainer')
   }
 
 // converts string of chars to array, reformat and push to entered words array
@@ -205,12 +215,14 @@ const handleEnterClick = (event) => {
     showPopUp('Oops!!', result.reason, 'close')
     userChoiceDisplayEl.textContent = ''
     currentPlayerChoice = []
+    displayUserChoiceContainerEl.classList.add('hiddenContainer')
     return 
   }
   previousPlayerChoice.push(result.word)
   appendToList(previousPlayerChoice[previousPlayerChoice.length -1])
   userChoiceDisplayEl.textContent = ''
   currentPlayerChoice = []
+  document.getElementById('displayUserChoiceContainer').classList.add('hiddenContainer')
   updateWordsLeft()
   checkIfEntered() 
 }
@@ -232,6 +244,8 @@ const init = () => {
   myPopUpEl.style.display = 'none'
   currentPlayerChoice = []
   previousPlayerChoice= []
+  displayUserChoiceContainerEl.classList.add('hiddenContainer')
+  displayWordListContainerEL.classList.add('hiddenContainer')
   shuffleSplitWord()
   displayLetterSet()
 }
@@ -239,7 +253,7 @@ const init = () => {
 /* ------------------------------------ Event Listeners ------------------------------------*/
 for (eachLetter of letterBtnELs) {eachLetter.addEventListener('click', handleLetterClick)}
 clearBtnEl.addEventListener('click', handleClearClick)
-enterBtnEls.addEventListener('click', handleEnterClick)
+enterBtnEl.addEventListener('click', handleEnterClick)
 closePopUpEl.addEventListener('click', closePopUp)
 resetBtnEl.addEventListener('click', init)
 init()

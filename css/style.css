@@ -28,14 +28,15 @@ body{
     height: 100vh;
     overflow: auto;
     background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 #myPopUpContent{
-    background-color: rgb(86, 65, 98);
+    background-color: rgb(115, 87, 131);
     margin: 14vw auto;
     padding: 10px 40px 10px 40px;
-    border: 1px solid #888;
+    border-radius: 5px;
+    border: 2px solid rgb(74, 55, 85);
     height: 100px;
     width: fit-content;
     display: flex;
@@ -44,21 +45,41 @@ body{
     align-items: center;
 }
 
-#displayLetterSetContainer{
-    width: 500px;
-    background-color: antiquewhite;
-    border-radius: 5px;
-    padding: 5px;
-    margin: 5px;
-    display: flex;
-    justify-content: center;
-}
-
 #displayLetterSet{
     font-family: Inter, Poppins, sans-serif;
     color:rgb(51, 13, 103);
     font-size: 20px;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+#displayUserChoice{
+    font-family: Inter, Poppins, sans-serif;
+    color:rgb(51, 13, 103);
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+#displayWordList{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5px;
+}
+
+#displayWordList li{
+    list-style-type: none;
+    font-family: Inter, Poppins, sans-serif;
+    color:rgb(51, 13, 103);
+    font-size: 15px;
+    font-weight: 550;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #keyboardContainer{
@@ -69,6 +90,11 @@ body{
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+#resetContainer{
+    display: flex;
+    flex-direction: column;
 }
 
 #keyboard{
@@ -94,6 +120,26 @@ body{
     justify-content: center;
 }
 
+
+
+.hiddenContainer {
+    visibility: hidden; 
+    height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.basicContainer{
+    width: 300px;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px auto;
+    display: flex;
+    justify-content: center;
+}
+
 .row{
     width: 100%;
     height: 80px;
@@ -109,6 +155,8 @@ body{
     height: fit-content;
     width: fit-content;
     outline: none;
+    margin-top: 5px;
+    border-radius: 5px;
     color: rgb(51, 13, 103);
     background-color: antiquewhite;
     box-shadow: 5px 5px 10px rgb(57, 21, 57);
