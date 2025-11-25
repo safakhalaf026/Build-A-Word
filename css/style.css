@@ -92,9 +92,29 @@ body{
     justify-content: center;
 }
 
-#resetContainer{
+#sidePanel{
+    position: fixed;
+    right:250px;
+    top: 100px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#displaySafeTimer{
+    background-color: antiquewhite;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+    box-shadow: 5px 5px 10px rgb(57, 21, 57);
+}
+
+#displayWordsLeft{
+    background-color: antiquewhite;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgb(57, 21, 57);
 }
 
 #keyboard{
@@ -120,8 +140,6 @@ body{
     justify-content: center;
 }
 
-
-
 .hiddenContainer {
     visibility: hidden; 
     height: 0;
@@ -138,6 +156,7 @@ body{
     margin: 5px auto;
     display: flex;
     justify-content: center;
+    box-shadow: 5px 5px 10px rgb(57, 21, 57);
 }
 
 .row{
@@ -168,6 +187,7 @@ body{
 }
 
 .keyButton{
+    font-family: Arial, Helvetica, sans-serif;
     width: 60px;
     height: 60px;
     font-size: 20px;

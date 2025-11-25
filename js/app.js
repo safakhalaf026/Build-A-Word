@@ -165,6 +165,7 @@ const updateWordsLeft = () => {
   const foundWords = previousPlayerChoice.length
   const remainingWords = totalWords - foundWords
   displayWordsLeftEl.textContent = `Words left: ${remainingWords}`
+  displayWordsLeftEl.classList.remove('hiddenContainer')
 }
 
 // checks if all valid words have been entered
@@ -246,6 +247,7 @@ const init = () => {
   previousPlayerChoice= []
   displayUserChoiceContainerEl.classList.add('hiddenContainer')
   displayWordListContainerEL.classList.add('hiddenContainer')
+  displayWordsLeftEl.classList.add('hiddenContainer')
   shuffleSplitWord()
   displayLetterSet()
 }
