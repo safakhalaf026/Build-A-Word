@@ -63,7 +63,7 @@ BUILD - A - WORD is a browser-based word game where players form as many words a
         README.md
 
 
-## 🖼️ Screenshots (optional)
+## 🖼️ Screenshots
 - Home screen  
 ![Screenshot of landing page](./assets/mainPageScreenShot.png)
 - Gameplay  
