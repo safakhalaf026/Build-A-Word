@@ -10,7 +10,9 @@ body{
 
 h1{
     color:rgb(51, 13, 103);
-    font-size: 70px;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: rgb(236, 205, 163);
+    font-size: 80px;
     font-weight: 550;
     margin-bottom: 20px;
     font-family: Chewy, poppins, sans-serif; 

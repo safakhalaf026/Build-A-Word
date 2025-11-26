@@ -252,13 +252,15 @@ function shoot() {
     particleCount: 40,
     scalar: 1.2,
     shapes: ["star"],
+    origin: { x: 0, y: 0.5 } 
   });
 
   confetti({
     ...defaults,
-    particleCount: 10,
-    scalar: 0.75,
-    shapes: ["circle"],
+    particleCount: 40,
+    scalar: 1.2,
+    shapes: ["star"],
+    origin: { x: 1, y: 0.5 } 
   });
 }
 
