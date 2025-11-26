@@ -65,9 +65,9 @@ BUILD - A - WORD is a browser-based word game where players form as many words a
 
 ## 🖼️ Screenshots (optional)
 - Home screen  
-![Screenshot of landing page](../assets/mainPageScreenShot.png)
+![Screenshot of landing page](./assets/mainPageScreenShot.png)
 - Gameplay  
-![Screenshot of game play](./project-one/assets/gamePlayScreenShot.png)
+![Screenshot of game play](./assets/gamePlayScreenShot.png)
 - Winning screen with confetti  
 ![Screenshot of confetti on winning](./assets/confettiGamePlayScreenShot.png)
 
